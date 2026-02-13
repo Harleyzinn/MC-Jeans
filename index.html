@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC Jeans | 35 Anos de Excelência em Manufatura Industrial</title>
+    <title>MC Jeans | 35 Anos de Excelência Industrial Têxtil</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,7 +33,7 @@
         h1, h2, h3, h4 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
 
         .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
-        section { padding: 120px 0; }
+        section { padding: 100px 0; }
 
         /* --- Navigation --- */
         nav {
@@ -72,7 +72,7 @@
         }
         .hero-title { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.85; margin-bottom: 30px; }
 
-        /* --- Partnership & Stats --- */
+        /* --- Stats Bar --- */
         .stats-bar {
             background: var(--secondary);
             padding: 60px 0;
@@ -84,8 +84,27 @@
         .stat-number { font-family: 'Syne', sans-serif; font-size: 3rem; color: var(--accent); font-weight: 800; line-height: 1; }
         .stat-label { font-size: 0.7rem; font-weight: 800; color: var(--text-dim); letter-spacing: 2px; margin-top: 10px; }
 
+        /* --- Unidades Produtivas (Nova Parte) --- */
+        .unidades-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .unidade-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 4px;
+            transition: 0.4s;
+        }
+        .unidade-card:hover { border-color: var(--accent); }
+        .unidade-card h3 { color: var(--accent); font-size: 1.5rem; margin-bottom: 15px; }
+        .unidade-card p { color: var(--text-dim); font-size: 0.9rem; }
+        .unidade-card .highlight { color: var(--text-main); font-weight: 700; font-size: 1.2rem; }
+
         /* --- Technical Section --- */
-        .specs-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 60px; }
+        .specs-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 80px; }
         .specs-wrapper {
             background: rgba(255,255,255,0.01);
             border: 1px solid var(--border);
@@ -99,7 +118,7 @@
         }
         .tech-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
 
-        /* --- Production Timeline --- */
+        /* --- Timeline --- */
         .timeline { position: relative; padding-left: 30px; border-left: 1px solid var(--border); }
         .timeline-item { margin-bottom: 40px; position: relative; }
         .timeline-item::before { 
@@ -116,7 +135,7 @@
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 992px) {
-            .specs-grid { grid-template-columns: 1fr; }
+            .unidades-grid, .specs-grid { grid-template-columns: 1fr; }
             .hero-title { font-size: 3.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
         }
@@ -128,23 +147,22 @@
         <div class="container nav-content">
             <a href="#" class="logo">MC <span>JEANS</span></a>
             <ul class="nav-links">
-                <li><a href="#historia">35 Anos</a></li>
-                <li><a href="#infraestrutura">Infraestrutura</a></li>
-                <li><a href="#fluxo">Fluxo</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#infraestrutura">Operação</a></li>
+                <li><a href="#unidades">Unidades</a></li>
+                <li><a href="#contato">Diretoria</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="hero">
         <div class="container">
-            <span class="hero-tag reveal">Tradição Fabril desde 1991</span>
-            <h1 class="hero-title reveal">MANUFATURA<br>DE ALTA ESCALA.</h1>
+            <span class="hero-tag reveal">Referência Têxtil Industrial</span>
+            <h1 class="hero-title reveal">35 ANOS DE<br>SOLIDEZ.</h1>
             <p class="reveal" style="max-width: 650px; color: var(--text-dim); font-size: 1.1rem; margin-bottom: 50px;">
-                A <strong>MC Jeans (Maria do Carmo)</strong> é a parceira estratégica de longa data da <strong>Sawary</strong>, operando com exclusividade técnica para materializar as coleções da marca líder do mercado brasileiro.
+                A <strong>MC Jeans (Maria do Carmo)</strong> é a parceira estratégica exclusiva da <strong>Sawary</strong>, unindo décadas de expertise operacional com uma infraestrutura multi-regional de alta escala.
             </p>
             <div class="reveal">
-                <a href="#infraestrutura" style="background: var(--accent); color: white; padding: 15px 35px; text-decoration: none; font-weight: 800; border-radius: 2px; font-size: 0.8rem;">CONHECER PLANTA INDUSTRIAL</a>
+                <a href="#infraestrutura" style="background: var(--accent); color: white; padding: 15px 35px; text-decoration: none; font-weight: 800; border-radius: 2px; font-size: 0.8rem;">EXPLORAR CAPACIDADE FABRIL</a>
             </div>
         </div>
     </section>
@@ -154,7 +172,11 @@
             <div class="stats-flex reveal">
                 <div class="stat-item">
                     <p class="stat-number">35</p>
-                    <p class="stat-label">ANOS DE EXPERIÊNCIA</p>
+                    <p class="stat-label">ANOS DE HISTÓRIA</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">08</p>
+                    <p class="stat-label">SETORES PRODUTIVOS</p>
                 </div>
                 <div class="stat-item">
                     <p class="stat-number">150k</p>
@@ -168,10 +190,34 @@
         </div>
     </div>
 
+    <section id="unidades" class="container reveal">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem;">Presença e Distribuição Regional</h2>
+            <p style="color: var(--text-dim); max-width: 700px; margin: 20px auto 0;">Atualmente, a MC Jeans conta com 8 setores de produção estrategicamente distribuídos para otimizar o fluxo de manufatura dedicado.</p>
+        </div>
+        
+        <div class="unidades-grid">
+            <div class="unidade-card">
+                <h3>TAGUAÍ - SP</h3>
+                <p>Centro nervoso da operação, abrigando a maior concentração tecnológica da empresa.</p>
+                <div style="margin-top: 20px;">
+                    <span class="highlight">05 SETORES</span> <span style="font-size: 0.8rem; color: var(--text-dim);">ATIVOS</span>
+                </div>
+            </div>
+            <div class="unidade-card">
+                <h3>TAQUARITUBA - SP</h3>
+                <p>Unidade de expansão e suporte estratégico, garantindo a escalabilidade das coleções.</p>
+                <div style="margin-top: 20px;">
+                    <span class="highlight">03 SETORES</span> <span style="font-size: 0.8rem; color: var(--text-dim);">ATIVOS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="infraestrutura" class="container">
         <div class="reveal">
-            <h2 style="font-size: 3rem; margin-bottom: 20px;">Infraestrutura Operacional</h2>
-            <p style="color: var(--text-dim); max-width: 700px;">Nossa unidade fabril é otimizada para a produção dedicada, unindo 35 anos de saber artesanal com a precisão do maquinário de última geração.</p>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Engenharia de Produção</h2>
+            <p style="color: var(--text-dim); max-width: 700px;">Nossa planta industrial é homologada e integrada diretamente aos padrões Sawary.</p>
         </div>
 
         <div class="specs-grid">
@@ -180,7 +226,7 @@
                     <thead>
                         <tr>
                             <th>SETOR</th>
-                            <th>TECNOLOGIA</th>
+                            <th>EQUIPAMENTO</th>
                             <th>ESPECIFICAÇÃO</th>
                         </tr>
                     </thead>
@@ -188,45 +234,45 @@
                         <tr>
                             <td style="font-family: var(--font-mono);">01. CORTE</td>
                             <td><strong>Audaces Jet 75</strong></td>
-                            <td>Encaixe otimizado por software</td>
+                            <td>Aproveitamento Máximo de Tecido</td>
                         </tr>
                         <tr>
                             <td style="font-family: var(--font-mono);">02. COSTURA</td>
-                            <td><strong>Autômatas CNC</strong></td>
-                            <td>Padrão de ponto alta resistência</td>
+                            <td><strong>Células CNC</strong></td>
+                            <td>Pontos de Alta Resistência (14oz+)</td>
                         </tr>
                         <tr>
-                            <td style="font-family: var(--font-mono);">03. LAVANDERIA</td>
+                            <td style="font-family: var(--font-mono);">03. ACABAMENTO</td>
                             <td><strong>Túneis de Estonagem</strong></td>
-                            <td>Acabamentos premium Sawary</td>
+                            <td>Padrão Estético Premium</td>
                         </tr>
                         <tr>
-                            <td style="font-family: var(--font-mono);">04. QUALIDADE</td>
+                            <td style="font-family: var(--font-mono);">04. EXPEDIÇÃO</td>
                             <td><strong>Audit AQL 1.0</strong></td>
-                            <td>Inspeção unitária rigorosa</td>
+                            <td>Zero Defeitos na Entrega</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="reveal" id="fluxo">
-                <h3 style="margin-bottom: 30px; font-size: 1.2rem; color: var(--accent);">Fluxo de Produção Dedicada</h3>
+            <div class="reveal">
+                <h3 style="margin-bottom: 30px; font-size: 1.2rem; color: var(--accent);">Fases do Contrato Sawary</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4>Aprovação Técnica</h4>
-                        <p>Alinhamento direto com o estilo Sawary.</p>
+                        <h4>Aprovação de Pilotagem</h4>
+                        <p>Validação técnica das amostras.</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Manufatura em Lote</h4>
-                        <p>Escalabilidade sem perda de padrão.</p>
+                        <h4>Manufatura Serial</h4>
+                        <p>Produção em escala nos 8 setores.</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Acabamento & Metais</h4>
-                        <p>Aplicação rigorosa de aviamentos.</p>
+                        <h4>Aplicação de Metais</h4>
+                        <p>Identidade visual Sawary garantida.</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Logística Direta</h4>
-                        <p>Prontidão para o CD central.</p>
+                        <h4>Entrega no CD Central</h4>
+                        <p>Logística integrada e pontual.</p>
                     </div>
                 </div>
             </div>
@@ -239,23 +285,23 @@
                 <div>
                     <h2 style="margin-bottom: 25px;">MC <span>JEANS</span></h2>
                     <p style="font-size: 0.9rem; color: var(--text-dim);">
-                        Tradição e robustez industrial desde 1991. Parceiro estratégico exclusivo na produção de denim de alta performance.
+                        Excelência operacional em manufatura denim desde 1991. Parceiro industrial exclusivo Sawary.
                     </p>
                 </div>
                 <div>
-                    <h4 style="color: var(--accent); margin-bottom: 20px;">Localização</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-dim);">Polo Têxtil Industrial, Brasil</p>
-                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 5px;">Unidade Operacional Maria do Carmo</p>
+                    <h4 style="color: var(--accent); margin-bottom: 20px;">Distribuição</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Taguaí - SP (5 Setores)</p>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 5px;">Taquarituba - SP (3 Setores)</p>
                 </div>
                 <div>
-                    <h4 style="color: var(--accent); margin-bottom: 20px;">Diretoria Industrial</h4>
+                    <h4 style="color: var(--accent); margin-bottom: 20px;">Diretoria B2B</h4>
                     <a href="mailto:adrielzo44@gmail.com" class="contact-link">diretoria@mcjeans.com.br</a>
-                    <p style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem;">CONTATO: (xx) xxxxx-0205</p>
+                    <p style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem;">SESSÃO PRIVADA: (xx) xxxxx-0205</p>
                 </div>
             </div>
             <div style="text-align: center; padding-top: 60px; border-top: 1px solid var(--border); margin-top: 60px;">
                 <p style="font-size: 0.7rem; color: var(--text-dim); letter-spacing: 1px;">
-                    &copy; 2026 MC JEANS INDUSTRIAL - 35 ANOS DE HISTÓRIA.
+                    &copy; 2026 MC JEANS INDUSTRIAL - MARIA DO CARMO. 35 ANOS DE TRADIÇÃO.
                 </p>
             </div>
         </div>
