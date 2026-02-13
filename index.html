@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC Jeans | Unidade Fabril Exclusiva Sawary</title>
+    <title>MC Jeans | 35 Anos de Excelência em Manufatura Industrial</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,15 +13,15 @@
             --primary: #020617;
             --secondary: #0f172a;
             --accent: #3b82f6;
-            --sawary-blue: #0056b3; /* Tom de azul clássico corporativo */
             --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.08);
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
             --font-mono: 'JetBrains Mono', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--primary); 
@@ -30,191 +30,255 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
+        h1, h2, h3, h4 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
 
         .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
-        section { padding: 100px 0; }
+        section { padding: 120px 0; }
 
-        /* --- Nav --- */
+        /* --- Navigation --- */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 2000;
-            padding: 20px 0; background: rgba(2, 6, 23, 0.9);
-            backdrop-filter: blur(15px); border-bottom: 1px solid var(--border);
+            padding: 25px 0; transition: 0.5s;
+            border-bottom: 1px solid transparent;
+        }
+        nav.scrolled {
+            background: rgba(2, 6, 23, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
         }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 2px; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; text-decoration: none; color: white; }
         .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { 
+            text-decoration: none; color: var(--text-dim); font-size: 0.75rem; 
+            font-weight: 700; text-transform: uppercase; transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
 
-        /* --- Exclusive Hero --- */
+        /* --- Hero --- */
         #hero {
-            height: 90vh;
+            height: 100vh;
             display: flex; align-items: center;
-            background: linear-gradient(to right, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.4)),
-                        url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=1920');
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent),
+                        linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)),
+                        url('https://images.unsplash.com/photo-1558603668-6570496b66f8?auto=format&fit=crop&q=80&w=1920');
             background-size: cover; background-position: center;
         }
         .hero-tag { 
-            display: inline-block; padding: 6px 16px; background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--accent); color: var(--accent);
-            font-size: 0.75rem; font-weight: 800; border-radius: 50px; margin-bottom: 25px;
+            display: inline-block; padding: 5px 15px; border: 1px solid var(--accent);
+            color: var(--accent); font-size: 0.65rem; font-weight: 800; border-radius: 2px; margin-bottom: 25px;
         }
-        .hero-title { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; margin-bottom: 20px; }
-        .hero-title span { color: var(--accent); }
+        .hero-title { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.85; margin-bottom: 30px; }
 
-        /* --- Sawary Affiliation Bar --- */
-        .affiliation-bar {
+        /* --- Partnership & Stats --- */
+        .stats-bar {
             background: var(--secondary);
+            padding: 60px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            padding: 30px 0;
         }
-        .aff-content { display: flex; align-items: center; gap: 40px; justify-content: center; }
-        .aff-text { font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; color: var(--text-main); }
-        .aff-logo-placeholder { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; border: 2px solid #fff; padding: 5px 15px; }
+        .stats-flex { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px; }
+        .stat-item { text-align: center; }
+        .stat-number { font-family: 'Syne', sans-serif; font-size: 3rem; color: var(--accent); font-weight: 800; line-height: 1; }
+        .stat-label { font-size: 0.7rem; font-weight: 800; color: var(--text-dim); letter-spacing: 2px; margin-top: 10px; }
 
-        /* --- Technical Table --- */
-        .specs-container {
-            background: var(--secondary);
-            border-radius: 12px;
+        /* --- Technical Section --- */
+        .specs-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 60px; }
+        .specs-wrapper {
+            background: rgba(255,255,255,0.01);
             border: 1px solid var(--border);
+            border-radius: 4px;
             overflow: hidden;
-            margin-top: 50px;
         }
-        .tech-table { width: 100%; border-collapse: collapse; text-align: left; }
-        .tech-table th { background: rgba(255,255,255,0.03); padding: 25px; color: var(--accent); font-family: var(--font-mono); font-size: 0.8rem; }
-        .tech-table td { padding: 20px 25px; border-bottom: 1px solid var(--border); color: var(--text-dim); border-right: 1px solid var(--border); }
-        .tech-table td:last-child { border-right: none; }
-        .tech-table tr:last-child td { border-bottom: none; }
-        .tech-table strong { color: var(--text-main); }
+        .tech-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .tech-table th { 
+            background: rgba(255,255,255,0.03); padding: 20px; 
+            text-align: left; color: var(--accent); font-family: var(--font-mono);
+        }
+        .tech-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
 
-        /* --- Content Section --- */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .exclusive-badge {
-            background: rgba(59, 130, 246, 0.1);
-            padding: 40px; border-radius: 8px; border-left: 4px solid var(--accent);
+        /* --- Production Timeline --- */
+        .timeline { position: relative; padding-left: 30px; border-left: 1px solid var(--border); }
+        .timeline-item { margin-bottom: 40px; position: relative; }
+        .timeline-item::before { 
+            content: ''; position: absolute; left: -35px; top: 5px; 
+            width: 9px; height: 9px; background: var(--accent); border-radius: 50%;
         }
 
         /* --- Footer --- */
-        footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.8rem; }
+        footer { padding: 100px 0 40px; border-top: 1px solid var(--border); background: #010409; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; }
+        .contact-link { color: var(--text-main); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; gap: 40px; } .hero-title { font-size: 3rem; } }
+        @media (max-width: 992px) {
+            .specs-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
+    <nav id="navbar">
         <div class="container nav-content">
-            <div class="logo">MC <span>JEANS</span></div>
-            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">INDUSTRIAL PARTNER OF SAWARY</div>
+            <a href="#" class="logo">MC <span>JEANS</span></a>
+            <ul class="nav-links">
+                <li><a href="#historia">35 Anos</a></li>
+                <li><a href="#infraestrutura">Infraestrutura</a></li>
+                <li><a href="#fluxo">Fluxo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
     </nav>
 
     <section id="hero">
         <div class="container">
-            <div class="reveal active">
-                <span class="hero-tag">CONTRATO EXCLUSIVO DE MANUFATURA</span>
-                <h1 class="hero-title">ENGENHARIA<br>TÊXTIL <span>SAWARY</span>.</h1>
-                <p style="max-width: 600px; color: var(--text-dim); margin-bottom: 40px;">
-                    A unidade industrial Maria do Carmo opera como célula dedicada à produção de alta complexidade para a Sawary. Tecnologia de ponta voltada à excelência da marca líder em denim.
-                </p>
+            <span class="hero-tag reveal">Tradição Fabril desde 1991</span>
+            <h1 class="hero-title reveal">MANUFATURA<br>DE ALTA ESCALA.</h1>
+            <p class="reveal" style="max-width: 650px; color: var(--text-dim); font-size: 1.1rem; margin-bottom: 50px;">
+                A <strong>MC Jeans (Maria do Carmo)</strong> é a parceira estratégica de longa data da <strong>Sawary</strong>, operando com exclusividade técnica para materializar as coleções da marca líder do mercado brasileiro.
+            </p>
+            <div class="reveal">
+                <a href="#infraestrutura" style="background: var(--accent); color: white; padding: 15px 35px; text-decoration: none; font-weight: 800; border-radius: 2px; font-size: 0.8rem;">CONHECER PLANTA INDUSTRIAL</a>
             </div>
         </div>
     </section>
 
-    <div class="affiliation-bar">
-        <div class="container aff-content reveal">
-            <div class="aff-text">UNIDADE FABRIL AFILIADA:</div>
-            <div class="aff-logo-placeholder">SAWARY</div>
-            <div class="aff-text" style="color: var(--accent); font-size: 0.8rem;">DEDICAÇÃO INTEGRAL À PRODUÇÃO</div>
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-flex reveal">
+                <div class="stat-item">
+                    <p class="stat-number">35</p>
+                    <p class="stat-label">ANOS DE EXPERIÊNCIA</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">150k</p>
+                    <p class="stat-label">PEÇAS / MÊS</p>
+                </div>
+                <div class="stat-item">
+                    <p style="font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 900;">SAWARY</p>
+                    <p class="stat-label">PARCEIRO EXCLUSIVO</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <section class="container">
-        <div class="grid-2">
-            <div class="reveal">
-                <h2>Fidelidade Operacional</h2>
-                <p style="margin-top: 20px;">
-                    Desde 1999, a <strong>MC Jeans (Maria do Carmo)</strong> consolidou-se como o pilar produtivo estratégico da Sawary. Nosso compromisso é a exclusividade técnica: cada máquina, processo e profissional em nossa planta é treinado especificamente para manter o DNA de qualidade Sawary.
-                </p>
-                <div class="exclusive-badge" style="margin-top: 30px;">
-                    <h4 style="color: var(--accent); margin-bottom: 10px;">Compromisso de Exclusividade</h4>
-                    <p style="font-size: 0.9rem;">Operamos sob regime de contrato fechado, garantindo sigilo industrial, prioridade total de linha e padrões de acabamento auditados pela marca.</p>
-                </div>
-            </div>
-            <div class="specs-container reveal">
+    <section id="infraestrutura" class="container">
+        <div class="reveal">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Infraestrutura Operacional</h2>
+            <p style="color: var(--text-dim); max-width: 700px;">Nossa unidade fabril é otimizada para a produção dedicada, unindo 35 anos de saber artesanal com a precisão do maquinário de última geração.</p>
+        </div>
+
+        <div class="specs-grid">
+            <div class="specs-wrapper reveal">
                 <table class="tech-table">
                     <thead>
                         <tr>
                             <th>SETOR</th>
-                            <th>TECNOLOGIA DEDICADA</th>
-                            <th>CAPACIDADE</th>
+                            <th>TECNOLOGIA</th>
+                            <th>ESPECIFICAÇÃO</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>CORTE</strong></td>
-                            <td>Audaces CAD/CAM v22</td>
-                            <td>+5.000 peças/dia</td>
+                            <td style="font-family: var(--font-mono);">01. CORTE</td>
+                            <td><strong>Audaces Jet 75</strong></td>
+                            <td>Encaixe otimizado por software</td>
                         </tr>
                         <tr>
-                            <td><strong>COSTURA</strong></td>
-                            <td>Células de Braço Heavy-Duty</td>
-                            <td>Pontos reforçados</td>
+                            <td style="font-family: var(--font-mono);">02. COSTURA</td>
+                            <td><strong>Autômatas CNC</strong></td>
+                            <td>Padrão de ponto alta resistência</td>
                         </tr>
                         <tr>
-                            <td><strong>ACABAMENTO</strong></td>
-                            <td>Lavanderia Laser Sustentável</td>
-                            <td>Efeitos Premium</td>
+                            <td style="font-family: var(--font-mono);">03. LAVANDERIA</td>
+                            <td><strong>Túneis de Estonagem</strong></td>
+                            <td>Acabamentos premium Sawary</td>
                         </tr>
                         <tr>
-                            <td><strong>LOGÍSTICA</strong></td>
-                            <td>Integração Direta com CD Sawary</td>
-                            <td>Prontidão Diária</td>
+                            <td style="font-family: var(--font-mono);">04. QUALIDADE</td>
+                            <td><strong>Audit AQL 1.0</strong></td>
+                            <td>Inspeção unitária rigorosa</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </section>
 
-    <section style="background: #010409;">
-        <div class="container reveal" style="text-align: center;">
-            <h2 style="margin-bottom: 40px;">Padrões de Qualidade</h2>
-            <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
-                <div>
-                    <h3 style="color: var(--accent);">AQL 1.0</h3>
-                    <p style="font-size: 0.8rem;">Rigor de Inspeção</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--accent);">ISO 9001</h3>
-                    <p style="font-size: 0.8rem;">Gestão Industrial</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--accent);">100%</h3>
-                    <p style="font-size: 0.8rem;">Auditoria Interna</p>
+            <div class="reveal" id="fluxo">
+                <h3 style="margin-bottom: 30px; font-size: 1.2rem; color: var(--accent);">Fluxo de Produção Dedicada</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Aprovação Técnica</h4>
+                        <p>Alinhamento direto com o estilo Sawary.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Manufatura em Lote</h4>
+                        <p>Escalabilidade sem perda de padrão.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Acabamento & Metais</h4>
+                        <p>Aplicação rigorosa de aviamentos.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Logística Direta</h4>
+                        <p>Prontidão para o CD central.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="contato">
         <div class="container">
-            <p>&copy; 2026 MC JEANS INDUSTRIAL - MARIA DO CARMO | PARCEIRO EXCLUSIVO SAWARY</p>
-            <p style="margin-top: 10px; opacity: 0.5; font-family: var(--font-mono); font-size: 0.6rem;">RESTRICTED TO INDUSTRIAL PARTNERSHIP ACCESS ONLY</p>
+            <div class="footer-grid reveal">
+                <div>
+                    <h2 style="margin-bottom: 25px;">MC <span>JEANS</span></h2>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Tradição e robustez industrial desde 1991. Parceiro estratégico exclusivo na produção de denim de alta performance.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 20px;">Localização</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Polo Têxtil Industrial, Brasil</p>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 5px;">Unidade Operacional Maria do Carmo</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 20px;">Diretoria Industrial</h4>
+                    <a href="mailto:adrielzo44@gmail.com" class="contact-link">diretoria@mcjeans.com.br</a>
+                    <p style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem;">CONTATO: (xx) xxxxx-0205</p>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 60px; border-top: 1px solid var(--border); margin-top: 60px;">
+                <p style="font-size: 0.7rem; color: var(--text-dim); letter-spacing: 1px;">
+                    &copy; 2026 MC JEANS INDUSTRIAL - 35 ANOS DE HISTÓRIA.
+                </p>
+            </div>
         </div>
     </footer>
 
     <script>
-        window.addEventListener('scroll', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) el.classList.add('active');
-            });
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
         });
     </script>
 </body>
