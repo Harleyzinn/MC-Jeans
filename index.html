@@ -3,163 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MC Jeans - Maria do Carmo: Tradição e inovação em confecção denim premium.">
-    <title>MC Jeans | Maria do Carmo - Excelência Têxtil</title>
+    <meta name="description" content="MC Jeans - Especialistas em Manufatura Industrial e Private Label para o setor Denim.">
+    <title>MC Jeans | Soluções em Private Label e Manufatura</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --primary-denim: #101d33;
-            --denim-medium: #2c3e50;
-            --accent-copper: #b87333;
-            --bg-light: #f9f9f9;
+            --denim-dark: #0f172a;
+            --denim-main: #1e293b;
+            --steel: #94a3b8;
+            --accent-blue: #38bdf8;
             --white: #ffffff;
-            --text-main: #333;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --bg-table: #f1f5f9;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--denim-dark); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-main);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
-
-        /* Navegação Avançada */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 2000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 8%;
-            max-width: 1600px;
-            margin: auto;
-        }
-
-        .logo { font-size: 1.8rem; font-weight: 900; text-decoration: none; color: var(--primary-denim); }
-        .logo span { color: var(--accent-copper); }
-
+        header { background: var(--denim-dark); position: fixed; width: 100%; top: 0; z-index: 1000; padding: 1rem 8%; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--white); text-decoration: none; }
+        .logo span { color: var(--accent-blue); }
         .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 2.5rem; }
-        .nav-links a { 
-            text-decoration: none; 
-            color: var(--primary-denim); 
-            font-weight: 600; 
-            font-size: 0.85rem; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: var(--transition);
-        }
-        .nav-links a:hover { color: var(--accent-copper); }
+        .nav-links li { margin-left: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--steel); font-size: 0.8rem; font-weight: 600; }
 
-        /* Hero Moderno */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(16, 29, 51, 0.6), rgba(16, 29, 51, 0.6)), 
-                        url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
+        section { padding: 6rem 10%; max-width: 1400px; margin: auto; }
+        .hero { 
+            height: 60vh; background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
         }
 
-        .hero-box h1 { font-size: 5rem; margin-bottom: 1rem; letter-spacing: -2px; }
-        .hero-box p { font-size: 1.4rem; font-weight: 300; margin-bottom: 2.5rem; }
+        .section-header { margin-bottom: 3rem; border-left: 4px solid var(--accent-blue); padding-left: 1rem; }
 
-        /* Stats Section */
-        .stats {
-            background: var(--primary-denim);
-            color: var(--white);
-            display: flex;
-            justify-content: space-around;
-            padding: 4rem 10%;
-            text-align: center;
-        }
-        .stat-item h2 { font-size: 3rem; color: var(--accent-copper); }
+        /* Estilo da Tabela Técnica */
+        .table-container { overflow-x: auto; margin-top: 2rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--white); margin-top: 1rem; }
+        th { background: var(--denim-dark); color: var(--white); padding: 1.2rem; text-align: left; text-transform: uppercase; font-size: 0.9rem; }
+        td { padding: 1rem; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+        tr:nth-child(even) { background: var(--bg-table); }
+        tr:hover { background: #e0f2fe; transition: 0.3s; }
 
-        /* Galeria de Produtos (Filtro) */
-        .filter-buttons { text-align: center; margin-bottom: 3rem; }
-        .filter-btn {
-            padding: 0.8rem 2rem;
-            margin: 0.5rem;
-            border: 1px solid var(--accent-copper);
-            background: transparent;
-            cursor: pointer;
-            font-family: inherit;
-            transition: var(--transition);
-        }
-        .filter-btn.active, .filter-btn:hover { background: var(--accent-copper); color: var(--white); }
+        /* Card Private Label */
+        .pl-box { background: var(--denim-main); color: var(--white); padding: 3rem; border-radius: 4px; display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; }
+        .pl-tag { background: var(--accent-blue); color: var(--denim-dark); padding: 0.5rem 1rem; font-weight: 800; display: inline-block; margin-bottom: 1rem; }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .product-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            height: 400px;
-        }
-        .product-card img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .product-card:hover img { transform: scale(1.1); }
-        .product-overlay {
-            position: absolute; bottom: 0; left: 0; right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            padding: 2rem; color: white; opacity: 0; transition: var(--transition);
-        }
-        .product-card:hover .product-overlay { opacity: 1; }
+        .btn { background: var(--accent-blue); color: var(--denim-dark); padding: 1rem 2rem; text-decoration: none; font-weight: 700; text-transform: uppercase; border: none; cursor: pointer; }
 
-        /* FAQ - Accordion */
-        .faq-container { max-width: 800px; margin: auto; }
-        .faq-item { border-bottom: 1px solid #ddd; padding: 1rem 0; cursor: pointer; }
-        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #666; padding-top: 0; }
-        .faq-item.active .faq-answer { max-height: 100px; padding-top: 1rem; }
+        footer { background: var(--denim-dark); color: var(--steel); padding: 2rem; text-align: center; border-top: 1px solid #1e293b; }
 
-        /* Footer Expandido */
-        footer { background: #0a111f; color: #8892b0; padding: 4rem 10% 2rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
-        .footer-brand h2 { color: var(--white); margin-bottom: 1.5rem; }
-
-        #backToTop {
-            position: fixed; bottom: 30px; right: 30px;
-            background: var(--accent-copper); color: white;
-            width: 50px; height: 50px; border-radius: 50%;
-            display: none; align-items: center; justify-content: center;
-            cursor: pointer; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        section { padding: 8rem 10%; max-width: 1600px; margin: auto; }
-        .btn {
-            padding: 1.2rem 3rem; background: var(--accent-copper); color: white;
-            text-decoration: none; display: inline-block; font-weight: 700; border-radius: 4px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-box h1 { font-size: 3rem; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .stats { flex-direction: column; gap: 2rem; }
-        }
+        @media (max-width: 768px) { .pl-box { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -168,208 +64,95 @@
         <nav>
             <a href="#" class="logo">MC <span>JEANS</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">História</a></li>
-                <li><a href="#colecoes">Coleções</a></li>
-                <li><a href="#faq">Dúvidas</a></li>
-                <li><a href="#contato">Fale Conosco</a></li>
+                <li><a href="#maquinario">Tecnologia</a></li>
+                <li><a href="#private-label">Private Label</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="home" class="hero">
-        <div class="hero-content hero-box">
-            <h1>Maria do Carmo</h1>
-            <p>A costura que veste gerações com força e elegância.</p>
-            <a href="#colecoes" class="btn">Explorar Catálogo</a>
+    <div class="hero">
+        <div>
+            <h1 style="font-size: 3.5rem;">Infraestrutura Têxtil</h1>
+            <p style="color: var(--steel);">Capacidade técnica para grandes volumes e acabamentos críticos.</p>
         </div>
     </div>
 
-    <div class="stats">
-        <div class="stat-item">
-            <h2 class="counter" data-target="25">0</h2>
-            <p>Anos de Tradição</p>
+    <section id="maquinario">
+        <div class="section-header">
+            <h2>Ficha Técnica de Equipamentos</h2>
+            <p>Nossa planta industrial é equipada com o que há de mais moderno para o processamento de Denim.</p>
         </div>
-        <div class="stat-item">
-            <h2 class="counter" data-target="150">0</h2>
-            <p>K+ Peças ao Mês</p>
-        </div>
-        <div class="stat-item">
-            <h2 class="counter" data-target="500">0</h2>
-            <p>Parceiros Atendidos</p>
-        </div>
-    </div>
-
-    <section id="sobre">
-        <div style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Nossa Essência</h2>
-                <p>A <strong>MC Jeans</strong> não apenas produz roupas; nós moldamos o denim para se adaptar à vida das pessoas. O que começou com uma pequena mesa de corte de <strong>Maria do Carmo</strong>, hoje é referência nacional em tecnologia de lavanderia e acabamento premium.</p>
-                <br>
-                <p>Nossa missão é oferecer o equilíbrio perfeito entre a robustez do jeans industrial e o refinamento da moda urbana.</p>
-            </div>
-            <div style="flex: 1; min-width: 300px;">
-                <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80&w=800" style="width: 100%; border-radius: 15px; box-shadow: 0 30px 60px rgba(0,0,0,0.1);" alt="Denim Detail">
-            </div>
-        </div>
-    </section>
-
-    <section id="colecoes" style="background: var(--bg-light);">
-        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Coleções MC</h2>
         
-        <div class="filter-buttons">
-            <button class="filter-btn active" onclick="filterGallery('todos')">Ver Todos</button>
-            <button class="filter-btn" onclick="filterGallery('fem')">Feminino</button>
-            <button class="filter-btn" onclick="filterGallery('masc')">Masculino</button>
-        </div>
-
-        <div class="gallery-grid" id="productGallery">
-            <div class="product-card masc">
-                <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&q=80&w=600" alt="Jeans Masculino">
-                <div class="product-overlay"><h3>Raw Denim Slim</h3><p>Masculino</p></div>
-            </div>
-            <div class="product-card fem">
-                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=600" alt="Jeans Feminino">
-                <div class="product-overlay"><h3>High Waist Skinny</h3><p>Feminino</p></div>
-            </div>
-            <div class="product-card fem">
-                <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&q=80&w=600" alt="Jaqueta Jeans">
-                <div class="product-overlay"><h3>Oversized Jacket</h3><p>Feminino</p></div>
-            </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipamento / Setor</th>
+                        <th>Função Técnica</th>
+                        <th>Diferencial Produtivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Corte Audaces</strong></td>
+                        <td>Encaixe e risco computadorizado</td>
+                        <td>Aproveitamento de 98% do tecido (Desperdício Mínimo)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Máquinas de Braço</strong></td>
+                        <td>Costura de fechamento lateral pesada</td>
+                        <td>Alta resistência e reforço em costuras duplas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Travete Eletrônica</strong></td>
+                        <td>Reforço de pontos de tensão (bolsos/passantes)</td>
+                        <td>Precisão de 3000 pontos por minuto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lavanderia a Laser</strong></td>
+                        <td>Efeitos de estonagem e desgaste</td>
+                        <td>Processo sustentável sem uso de produtos químicos agressivos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Botoneira Automática</strong></td>
+                        <td>Aplicação de rebites e botões</td>
+                        <td>Padronização estética e fixação de alta segurança</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
-    <section id="faq">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Dúvidas Frequentes</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">Vocês fazem Private Label? <i class="fas fa-plus"></i></div>
-                <div class="faq-answer">Sim! Produzimos sua coleção completa com suas etiquetas e botões personalizados, garantindo sigilo e qualidade.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Qual o pedido mínimo para atacado? <i class="fas fa-plus"></i></div>
-                <div class="faq-answer">Trabalhamos com lotes mínimos a partir de 50 peças por modelo para garantir a viabilidade técnica da produção.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Enviamos para todo o Brasil? <i class="fas fa-plus"></i></div>
-                <div class="faq-answer">Sim, temos parcerias logísticas para entregar em todos os estados com seguro total da carga.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;">
+    <section id="private-label" style="background: #f8fafc;">
+        <div class="pl-box">
             <div>
-                <h2 style="margin-bottom: 2rem;">Inicie seu Projeto</h2>
-                <p>Nossa equipe de consultoria técnica está pronta para transformar seus desenhos em realidade.</p>
-                <div style="margin-top: 2rem;">
-                    <p><i class="fas fa-phone" style="color: var(--accent-copper); margin-right: 1rem;"></i> (11) 98765-4321</p>
-                    <p><i class="fas fa-envelope" style="color: var(--accent-copper); margin-right: 1rem;"></i> contato@mcjeans.com.br</p>
-                </div>
+                <span class="pl-tag">B2B Service</span>
+                <h2>Private Label</h2>
+                <p>O foco da MC Jeans é viabilizar a sua marca.</p>
             </div>
-            <form id="mcForm">
-                <input type="text" placeholder="Nome da sua Marca/Empresa" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd;" required>
-                <input type="email" placeholder="E-mail de Contato" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd;" required>
-                <textarea placeholder="Fale sobre sua demanda (quantidade, tipos de jeans...)" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; height: 150px;"></textarea>
-                <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Solicitar Consultoria</button>
-            </form>
+            <div>
+                <p>Atuamos como a célula de inteligência produtiva para grandes parceiros. No modelo <strong>Private Label</strong>, cuidamos de todas as etapas:</p>
+                <ul style="margin: 1.5rem 0; padding-left: 1.2rem;">
+                    <li>Desenvolvimento de amostras e pilotagem.</li>
+                    <li>Produção de grandes lotes com grade completa.</li>
+                    <li>Aplicação da sua identidade visual (Etiquetas, Tags e Metais).</li>
+                    <li>Controle de qualidade rigoroso por amostragem AQL.</li>
+                </ul>
+                <p><em>Foque no seu branding e vendas, nós cuidamos do chão de fábrica.</em></p>
+            </div>
         </div>
     </section>
 
-    <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <section id="contato" style="text-align: center;">
+        <h2 style="margin-bottom: 2rem;">Pronto para produzir conosco?</h2>
+        <p style="margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">Agende uma visita à nossa confecção e conheça de perto o padrão Maria do Carmo de qualidade industrial.</p>
+        <a href="mailto:contato@mcjeans.com.br" class="btn">Falar com Gerência Industrial</a>
+    </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h2>MC <span>JEANS</span></h2>
-                <p>Qualidade Maria do Carmo: onde o fio encontra a perfeição. Desde 1999 transformando o mercado têxtil brasileiro.</p>
-            </div>
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem;">Menu</h3>
-                <p><a href="#sobre" style="color: inherit; text-decoration: none;">Sobre</a></p>
-                <p><a href="#colecoes" style="color: inherit; text-decoration: none;">Coleções</a></p>
-                <p><a href="#faq" style="color: inherit; text-decoration: none;">FAQ</a></p>
-            </div>
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem;">Social</h3>
-                <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-            </div>
-        </div>
-        <center><p>&copy; 2026 MC Jeans - Desenvolvido para Excelência.</p></center>
+        <p>&copy; 2026 MC Jeans - Maria do Carmo | Especialista em Denim</p>
     </footer>
 
-    <script>
-        // Animação de Contadores
-        const counters = document.querySelectorAll('.counter');
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const speed = 200;
-                const inc = target / speed;
-
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        };
-
-        // Ativa contadores quando visíveis
-        const observer = new IntersectionObserver((entries) => {
-            if(entries[0].isIntersecting) animateCounters();
-        }, { threshold: 0.5 });
-        observer.observe(document.querySelector('.stats'));
-
-        // Filtro de Galeria
-        function filterGallery(category) {
-            const cards = document.querySelectorAll('.product-card');
-            const btns = document.querySelectorAll('.filter-btn');
-            
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            cards.forEach(card => {
-                if (category === 'todos' || card.classList.contains(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // FAQ Accordion
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-                const icon = item.querySelector('i');
-                icon.classList.toggle('fa-plus');
-                icon.classList.toggle('fa-minus');
-            });
-        });
-
-        // Botão Topo
-        const btt = document.getElementById('backToTop');
-        window.onscroll = () => {
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                btt.style.display = "flex";
-            } else {
-                btt.style.display = "none";
-            }
-        };
-        btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
-
-        // Form Submission
-        document.getElementById('mcForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('A Maria do Carmo Jeans agradece! Nossa equipe técnica entrará em contato em breve.');
-        });
-    </script>
 </body>
 </html>
