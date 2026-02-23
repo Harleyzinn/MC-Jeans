@@ -3,9 +3,10 @@
 > **Portal Corporativo** | Parceiro Estratégico Exclusivo Sawary Jeans
 
 ![Project Status](https://img.shields.io/badge/status-production_ready-success)
-![Version](https://img.shields.io/badge/version-2.1.0-blue)
+![Version](https://img.shields.io/badge/version-2.3.0-blue)
 ![Compliance](https://img.shields.io/badge/LGPD-Compliant-brightgreen)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-orange)
+![Analytics](https://img.shields.io/badge/GA4-Tracking_Active-yellow)
 
 ## 📌 Sobre o Projeto
 
@@ -15,14 +16,17 @@ O projeto foi projetado com uma estética **"Dark Industrial"**, transmitindo so
 
 ### 🎯 Principais Funcionalidades
 
-- **Arquitetura Híbrida:** Fluxo principal em *Single-Page Application* (SPA) para conversão rápida, com páginas secundárias dedicadas (Política de Privacidade).
-- **Adequação LGPD:** - Modal de consentimento de Cookies com armazenamento local (`localStorage`).
-  - Página dedicada de Política de Privacidade.
+- **Arquitetura Híbrida:** Fluxo principal em *Single-Page Application* (SPA) para conversão rápida, com páginas secundárias dedicadas.
+- **Adequação LGPD e UX Jurídica:** - Modal de consentimento de Cookies com armazenamento local (`localStorage`).
+  - Documentação legal com UI Avançada (Grid Layout com Sticky Sidebar) para leitura confortável.
 - **Integração Logística (Google Maps):** Mapas interativos estilizados via CSS (Dark Mode Invert) apontando para a Matriz Fabril e o Showroom de Varejo em Taguaí - SP.
 - **Acessibilidade e Usabilidade:** - Botão *Back to Top* condicional ao scroll.
   - Navbar fluida com efeito de *Glassmorphism* dinâmico.
   - Rodapé com script de atualização automática de ano.
 - **Contato Dinâmico B2B:** Call-to-Action (CTA) otimizado e botão flutuante persistente integrados à API do WhatsApp.
+- **Inteligência de Dados (Analytics):**
+  - Rastreamento global de acessos via **Google Analytics 4 (GA4)**.
+  - Monitoramento de eventos customizados para conversão de Leads (`clique_whatsapp`, `clique_email`).
 - **Otimização SEO Avançada:** - Meta tags Open Graph (`og:`) configuradas para gerar rich-cards no WhatsApp/LinkedIn.
   - `robots.txt` para indexação direta pelos motores de busca.
   - `sitemap.xml` hierárquico mapeando as rotas da aplicação.
@@ -37,6 +41,7 @@ Projeto construído de forma nativa e enxuta (Vanilla), garantindo tempo de carr
   - Filtros CSS avançados para customização de iframes (Mapas).
 - **JavaScript (Vanilla):** - APIs nativas de observação de tela (Intersection animado `reveal`).
   - Manipulação de `localStorage` para a política de cookies.
+  - Disparo de payloads de rastreamento para a camada de dados do Google (`dataLayer`).
 
 ## 📄 Estrutura de Arquivos
 
