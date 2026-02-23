@@ -1,34 +1,46 @@
 # MC Jeans Industrial - Landing Page Institucional B2B
 
-> **Portal Corporativo de Página Única** | Parceiro Estratégico Sawary Jeans
+> **Portal Corporativo** | Parceiro Estratégico Exclusivo Sawary Jeans
 
-![Project Status](https://img.shields.io/badge/status-active-success)
-![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![Project Status](https://img.shields.io/badge/status-production_ready-success)
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Compliance](https://img.shields.io/badge/LGPD-Compliant-brightgreen)
 
 ## 📌 Sobre o Projeto
 
-Este projeto é uma **Landing Page Institucional Single-Page** desenvolvida para a **MC Jeans (Maria do Carmo)**, uma indústria têxtil focada em manufatura de alta escala. 
+Plataforma institucional de alta performance desenvolvida para a **MC Jeans (Maria do Carmo)**, indústria têxtil focada em manufatura de larga escala e precisão. 
 
-O foco da aplicação é estritamente operacional e B2B, apresentando a solidez da empresa, sua infraestrutura tecnológica (Audaces/CNC) e capacidade produtiva, culminando em uma área de contato direto com a diretoria para alinhamentos estratégicos.
+O projeto foi projetado com uma estética **"Dark Industrial"**, transmitindo solidez, tecnologia e autoridade B2B. O site apresenta a capacidade produtiva da empresa, infraestrutura tecnológica (Corte a Laser, CNC, Audaces) e fornece pontos de contato direto com a diretoria.
 
-### 🎯 Funcionalidades e Estrutura
+### 🎯 Principais Funcionalidades
 
-- **Design Single-Page:** Toda a jornada do usuário ocorre em uma única tela, garantindo carregamento rápido e navegação fluida sem recarregamentos.
-- **Destaque de Contato B2B:** - Call to Action (CTA) destacado no rodapé para contato direto via e-mail corporativo.
-  - Botão flutuante de WhatsApp permanente (Sticky) para respostas imediatas.
-- **Scroll Animations:** Elementos surgem suavemente ao rolar a página (Intersection Observer Vanilla JS).
-- **Navbar Dinâmica:** Efeito de desfoque (Blur) ao iniciar a rolagem.
+- **Arquitetura Híbrida:** Fluxo principal em *Single-Page Application* (SPA) para conversão rápida, com páginas secundárias dedicadas (Política de Privacidade).
+- **Adequação LGPD:** - Modal de consentimento de Cookies com armazenamento local (`localStorage`).
+  - Página dedicada de Política de Privacidade.
+- **Integração Logística (Google Maps):** Mapas interativos estilizados via CSS (Dark Mode Invert) apontando para a Matriz Fabril e o Showroom de Varejo em Taguaí - SP.
+- **Acessibilidade e Usabilidade:** - Botão *Back to Top* condicional ao scroll.
+  - Navbar fluida com efeito de *Glassmorphism* dinâmico.
+  - Rodapé com script de atualização automática de ano.
+- **Contato Dinâmico B2B:** Call-to-Action (CTA) otimizado e botão flutuante persistente integrados à API do WhatsApp.
+- **Otimização para Redes Sociais:** Meta tags Open Graph (`og:`) configuradas para gerar rich-cards (com imagem e descrição) em compartilhamentos via WhatsApp e LinkedIn.
 
 ## 🚀 Tecnologias Utilizadas
 
-Projeto construído sem frameworks pesados, garantindo a máxima performance técnica:
+Projeto construído de forma nativa e enxuta (Vanilla), garantindo tempo de carregamento instantâneo e excelente pontuação de SEO, sem dependência de bibliotecas pesadas.
 
-- **HTML5:** Estrutura semântica.
-- **CSS3:** Flexbox, CSS Grid, Variáveis de Escopo e Media Queries para responsividade.
-- **JavaScript (Vanilla):** Lógica de intersecção de elementos (Reveal) e mudança de estado do Navbar.
+- **HTML5:** Estruturação semântica multi-páginas.
+- **CSS3:** - CSS Grid & Flexbox para layout responsivo.
+  - Variáveis de Escopo (`:root`) para padronização da paleta de cores.
+  - Filtros CSS avançados para customização de iframes (Mapas).
+- **JavaScript (Vanilla):** - APIs nativas de observação de tela (Intersection animado `reveal`).
+  - Manipulação de `localStorage` para a política de cookies.
+  - Lógica de componentes pegajosos (Sticky e Floating).
 
-## 🔧 Como Executar
+## 📄 Estrutura de Arquivos
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/seu-usuario/mc-jeans-landing.git](https://github.com/seu-usuario/mc-jeans-landing.git)
+```text
+mc-jeans-landing/
+│
+├── index.html                  # Landing Page Principal (Hero, Infraestrutura, Mapa)
+├── politica-privacidade.html   # Documentação de Compliance LGPD
+└── README.md                   # Documentação do Repositório
