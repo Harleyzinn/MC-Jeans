@@ -84,7 +84,7 @@
         .stat-number { font-family: 'Syne', sans-serif; font-size: 3rem; color: var(--accent); font-weight: 800; line-height: 1; }
         .stat-label { font-size: 0.7rem; font-weight: 800; color: var(--text-dim); letter-spacing: 2px; margin-top: 10px; }
 
-        /* --- Unidades Produtivas (Nova Parte) --- */
+        /* --- Unidades Produtivas --- */
         .unidades-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -126,10 +126,34 @@
             width: 9px; height: 9px; background: var(--accent); border-radius: 50%;
         }
 
-        /* --- Footer --- */
+        /* --- Footer & Destaque de Contato --- */
         footer { padding: 100px 0 40px; border-top: 1px solid var(--border); background: #010409; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; }
-        .contact-link { color: var(--text-main); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 60px; align-items: center; }
+        
+        .contact-highlight {
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid var(--accent);
+            padding: 35px;
+            border-radius: 4px;
+            text-align: left;
+        }
+        .contact-highlight h4 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 15px; }
+        .contact-link { 
+            display: inline-block; color: white; background: var(--accent); 
+            padding: 12px 25px; text-decoration: none; font-weight: 700; 
+            border-radius: 2px; margin-top: 15px; transition: 0.3s;
+        }
+        .contact-link:hover { background: #2563eb; transform: translateY(-2px); }
+
+        /* --- WhatsApp Flutuante --- */
+        .whatsapp-btn {
+            position: fixed; bottom: 30px; right: 30px; z-index: 3000;
+            background: #25d366; color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: 0.3s; text-decoration: none;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.5); }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -138,6 +162,7 @@
             .unidades-grid, .specs-grid { grid-template-columns: 1fr; }
             .hero-title { font-size: 3.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-highlight { text-align: center; }
         }
     </style>
 </head>
@@ -293,10 +318,11 @@
                     <p style="font-size: 0.85rem; color: var(--text-dim);">Taguaí - SP (5 Setores)</p>
                     <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 5px;">Taquarituba - SP (3 Setores)</p>
                 </div>
-                <div>
-                    <h4 style="color: var(--accent); margin-bottom: 20px;">Diretoria B2B</h4>
-                    <a href="mailto:adrielzo44@gmail.com" class="contact-link">diretoria@mcjeans.com.br</a>
-                    <p style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem;">SESSÃO PRIVADA: (xx) xxxxx-0205</p>
+                <div class="contact-highlight">
+                    <h4>Diretoria B2B</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 10px;">Atendimento exclusivo para alinhamentos estratégicos e industriais.</p>
+                    <a href="mailto:adrielzo44@gmail.com" style="color: var(--text-dim); text-decoration: none; font-size: 0.9rem;"><i class="fa-regular fa-envelope"></i> diretoria@mcjeans.com.br</a><br>
+                    <a href="https://wa.me/5500000000000" class="contact-link" target="_blank"><i class="fa-brands fa-whatsapp"></i> Iniciar Conversa</a>
                 </div>
             </div>
             <div style="text-align: center; padding-top: 60px; border-top: 1px solid var(--border); margin-top: 60px;">
@@ -306,6 +332,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/5514997000206" class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         function reveal() {
