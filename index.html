@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC Jeans | 35 Anos de Excelência Industrial Têxtil</title>
     
+    <meta name="description" content="MC Jeans - 35 anos de excelência operacional em manufatura denim. Parceiro industrial exclusivo Sawary.">
+    <meta property="og:title" content="MC Jeans | Indústria Têxtil">
+    <meta property="og:description" content="Infraestrutura de alta escala e manufatura dedicada em Taguaí e Taquarituba.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558603668-6570496b66f8?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -98,7 +107,7 @@
             border-radius: 4px;
             transition: 0.4s;
         }
-        .unidade-card:hover { border-color: var(--accent); }
+        .unidade-card:hover { border-color: var(--accent); transform: translateY(-5px); }
         .unidade-card h3 { color: var(--accent); font-size: 1.5rem; margin-bottom: 15px; }
         .unidade-card p { color: var(--text-dim); font-size: 0.9rem; }
         .unidade-card .highlight { color: var(--text-main); font-weight: 700; font-size: 1.2rem; }
@@ -128,14 +137,13 @@
 
         /* --- Footer & Destaque de Contato --- */
         footer { padding: 100px 0 40px; border-top: 1px solid var(--border); background: #010409; }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 60px; align-items: center; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 60px; align-items: start; }
         
         .contact-highlight {
             background: rgba(59, 130, 246, 0.05);
             border: 1px solid var(--accent);
             padding: 35px;
             border-radius: 4px;
-            text-align: left;
         }
         .contact-highlight h4 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 15px; }
         .contact-link { 
@@ -145,15 +153,25 @@
         }
         .contact-link:hover { background: #2563eb; transform: translateY(-2px); }
 
-        /* --- WhatsApp Flutuante --- */
-        .whatsapp-btn {
+        /* --- Floating Buttons --- */
+        .floating-btns {
             position: fixed; bottom: 30px; right: 30px; z-index: 3000;
-            background: #25d366; color: white; width: 60px; height: 60px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: 0.3s; text-decoration: none;
+            display: flex; flex-direction: column; gap: 15px;
         }
-        .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.5); }
+        
+        .btn-float {
+            width: 60px; height: 60px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: 0.3s;
+        }
+        
+        .btn-whatsapp { background: #25d366; font-size: 30px; }
+        .btn-whatsapp:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.5); }
+        
+        .btn-top { background: var(--secondary); border: 1px solid var(--border); opacity: 0; pointer-events: none; transform: translateY(20px); }
+        .btn-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .btn-top:hover { background: var(--accent); }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -162,15 +180,14 @@
             .unidades-grid, .specs-grid { grid-template-columns: 1fr; }
             .hero-title { font-size: 3.5rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .contact-highlight { text-align: center; }
         }
     </style>
 </head>
-<body>
+<body id="topo">
 
     <nav id="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">MC <span>JEANS</span></a>
+            <a href="#topo" class="logo">MC <span>JEANS</span></a>
             <ul class="nav-links">
                 <li><a href="#infraestrutura">Operação</a></li>
                 <li><a href="#unidades">Unidades</a></li>
@@ -242,7 +259,7 @@
     <section id="infraestrutura" class="container">
         <div class="reveal">
             <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Engenharia de Produção</h2>
-            <p style="color: var(--text-dim); max-width: 700px;">Nossa planta industrial é homologada e integrada diretamente aos padrões Sawary.</p>
+            <p style="color: var(--text-dim); max-width: 700px;">Nossa planta industrial é homologada e integrada diretamente aos padrões Sawary, contando com precisão digital e automação têxtil.</p>
         </div>
 
         <div class="specs-grid">
@@ -272,7 +289,17 @@
                             <td>Padrão Estético Premium</td>
                         </tr>
                         <tr>
-                            <td style="font-family: var(--font-mono);">04. EXPEDIÇÃO</td>
+                            <td style="font-family: var(--font-mono);">04. PRECISÃO</td>
+                            <td><strong>Corte a Laser CNC</strong></td>
+                            <td>Desgaste e marcação milimétrica no Denim</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono);">05. BORDADO</td>
+                            <td><strong>Matrizes Wilcom/Corel</strong></td>
+                            <td>Personalização industrial de alta fidelidade</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono);">06. EXPEDIÇÃO</td>
                             <td><strong>Audit AQL 1.0</strong></td>
                             <td>Zero Defeitos na Entrega</td>
                         </tr>
@@ -320,24 +347,37 @@
                 </div>
                 <div class="contact-highlight">
                     <h4>Diretoria B2B</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 10px;">Atendimento exclusivo para alinhamentos estratégicos e industriais.</p>
-                    <a href="mailto:adrekzo44@gmail.com" style="color: var(--text-dim); text-decoration: none; font-size: 0.9rem;"><i class="fa-regular fa-envelope"></i> diretoria@mcjeans.com.br</a><br>
-                    <a href="https://wa.me/5514997000206" class="contact-link" target="_blank"><i class="fa-brands fa-whatsapp"></i> Iniciar Conversa</a>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px;">Atendimento exclusivo para alinhamentos estratégicos e industriais.</p>
+                    <a href="mailto:adrielzo44@gmail.com" style="color: var(--text-dim); text-decoration: none; font-size: 0.95rem; display: block; margin-bottom: 10px;">
+                        <i class="fa-regular fa-envelope" style="color: var(--accent); margin-right: 8px;"></i> diretoria@mcjeans.com.br
+                    </a>
+                    <a href="https://wa.me/5500000000000" class="contact-link" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> Iniciar Conversa
+                    </a>
                 </div>
             </div>
             <div style="text-align: center; padding-top: 60px; border-top: 1px solid var(--border); margin-top: 60px;">
                 <p style="font-size: 0.7rem; color: var(--text-dim); letter-spacing: 1px;">
-                    &copy; 2026 MC JEANS INDUSTRIAL - MARIA DO CARMO. 35 ANOS DE TRADIÇÃO.
+                    &copy; <span id="current-year"></span> MC JEANS INDUSTRIAL - MARIA DO CARMO. 35 ANOS DE TRADIÇÃO.
                 </p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5514997000206" class="whatsapp-btn" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div class="floating-btns">
+        <a href="#topo" class="btn-float btn-top" id="backToTop" title="Voltar ao topo">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+        <a href="https://wa.me/5500000000000" class="btn-float btn-whatsapp" target="_blank" title="Fale conosco no WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script>
+        // Atualiza o ano automaticamente no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Animação de Reveal (Scroll)
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -351,10 +391,22 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
+        // Comportamento do Navbar e Botão Voltar ao Topo
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
         });
     </script>
 </body>
