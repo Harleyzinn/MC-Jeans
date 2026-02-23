@@ -1,50 +1,31 @@
-# MC Jeans Industrial - Landing Page Institucional
+# MC Jeans Industrial - Landing Page Institucional B2B
 
-> **Portal Corporativo** | Parceiro Estratégico Sawary Jeans
+> **Portal Corporativo de Página Única** | Parceiro Estratégico Sawary Jeans
 
 ![Project Status](https://img.shields.io/badge/status-active-success)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 
 ## 📌 Sobre o Projeto
 
-Este projeto é uma **Landing Page Institucional de Alta Performance** desenvolvida para a **MC Jeans (Maria do Carmo)**, uma indústria têxtil localizada em Taguaí-SP e Taquarituba-SP.
+Este projeto é uma **Landing Page Institucional Single-Page** desenvolvida para a **MC Jeans (Maria do Carmo)**, uma indústria têxtil focada em manufatura de alta escala. 
 
-O objetivo do site é apresentar a solidez de 35 anos da empresa, sua infraestrutura tecnológica (Audaces/CNC) e sua capacidade produtiva como parceira exclusiva da marca **Sawary**. O design reflete uma estética "Industrial Dark", transmitindo modernidade, robustez e elegância corporativa.
+O foco da aplicação é estritamente operacional e B2B, apresentando a solidez da empresa, sua infraestrutura tecnológica (Audaces/CNC) e capacidade produtiva, culminando em uma área de contato direto com a diretoria para alinhamentos estratégicos.
 
-### 🎯 Funcionalidades
+### 🎯 Funcionalidades e Estrutura
 
-- **Design Responsivo:** Adaptável para desktops, tablets e mobile.
-- **Scroll Animations:** Elementos surgem suavemente ao rolar a página (Intersection Observer).
-- **Navbar Dinâmica:** Efeito de desfoque (Blur) ao rolar a página.
-- **Seções Informativas:**
-  - Hero Screen com impacto visual.
-  - Dados Estatísticos (KPIs).
-  - Distribuição Geográfica (Unidades Taguaí/Taquarituba).
-  - Tabela Técnica de Maquinário.
-  - Timeline de Processos (Contrato Sawary).
+- **Design Single-Page:** Toda a jornada do usuário ocorre em uma única tela, garantindo carregamento rápido e navegação fluida sem recarregamentos.
+- **Destaque de Contato B2B:** - Call to Action (CTA) destacado no rodapé para contato direto via e-mail corporativo.
+  - Botão flutuante de WhatsApp permanente (Sticky) para respostas imediatas.
+- **Scroll Animations:** Elementos surgem suavemente ao rolar a página (Intersection Observer Vanilla JS).
+- **Navbar Dinâmica:** Efeito de desfoque (Blur) ao iniciar a rolagem.
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi construído utilizando tecnologias nativas para garantir máxima velocidade de carregamento e compatibilidade (SEO Friendly).
+Projeto construído sem frameworks pesados, garantindo a máxima performance técnica:
 
 - **HTML5:** Estrutura semântica.
-- **CSS3:**
-  - **CSS Variables:** Para fácil manutenção de paleta de cores.
-  - **Flexbox & Grid Layout:** Para estruturação responsiva.
-  - **Google Fonts:** Famílias *Syne* (Títulos), *Inter* (Corpo) e *JetBrains Mono* (Dados técnicos).
-- **JavaScript (Vanilla):**
-  - Controle de animações de scroll (`reveal`).
-  - Comportamento da barra de navegação.
-
-## 🎨 Paleta de Cores e Estilo
-
-| Cor | Hex | Uso |
-| :--- | :--- | :--- |
-| **Industrial Black** | `#020617` | Fundo Principal |
-| **Slate Navy** | `#0f172a` | Seções Secundárias |
-| **Sawary Blue** | `#3b82f6` | Acentos e Detalhes |
-| **Text Main** | `#f8fafc` | Títulos e Texto Claro |
-| **Text Dim** | `#94a3b8` | Descrições e Detalhes |
+- **CSS3:** Flexbox, CSS Grid, Variáveis de Escopo e Media Queries para responsividade.
+- **JavaScript (Vanilla):** Lógica de intersecção de elementos (Reveal) e mudança de estado do Navbar.
 
 ## 🔧 Como Executar
 
