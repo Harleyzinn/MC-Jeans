@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | MC Jeans</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #020617;
+            --secondary: #0f172a;
+            --accent: #3b82f6;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--primary); 
+            color: var(--text-main); 
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- Nav Simples --- */
+        nav {
+            padding: 25px 0; border-bottom: 1px solid var(--border);
+            background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+        .btn-back { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
+        .btn-back:hover { color: var(--accent); }
+
+        /* --- Header Policy --- */
+        .policy-header { padding: 80px 0 40px; text-align: center; border-bottom: 1px solid var(--border); background: var(--secondary); }
+        .policy-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .policy-header p { color: var(--text-dim); font-size: 1rem; }
+
+        /* --- Content --- */
+        .policy-content { padding: 60px 0; }
+        .policy-section {
+            background: var(--glass); border: 1px solid var(--border);
+            padding: 40px; border-radius: 4px; margin-bottom: 30px;
+        }
+        .policy-section h2 { color: var(--accent); font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .policy-section p { color: var(--text-dim); margin-bottom: 15px; font-size: 0.95rem; }
+        .policy-section ul { color: var(--text-dim); margin-left: 20px; margin-bottom: 15px; font-size: 0.95rem; }
+        .policy-section li { margin-bottom: 8px; }
+
+        /* --- Footer Simples --- */
+        footer { padding: 40px 0; border-top: 1px solid var(--border); background: #010409; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">MC <span>JEANS</span></a>
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
+        </div>
+    </nav>
+
+    <header class="policy-header">
+        <div class="container">
+            <h1>Política de Privacidade</h1>
+            <p>Última atualização: <span id="data-atual"></span></p>
+        </div>
+    </header>
+
+    <section class="policy-content container">
+        
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-shield-halved"></i> 1. Compromisso com a Privacidade</h2>
+            <p>A <strong>MC Jeans Industrial</strong> tem o compromisso de respeitar a sua privacidade e garantir o sigilo de todas as informações que você nos fornece. Esta Política de Privacidade, formulada à luz da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), explica como seus dados pessoais são coletados, usados e protegidos em nossa plataforma.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-database"></i> 2. Coleta de Dados</h2>
+            <p>Como um portal de contato B2B institucional, nossa coleta de dados é mínima e focada no relacionamento comercial. Coletamos informações nas seguintes situações:</p>
+            <ul>
+                <li><strong>Contato Direto:</strong> Quando você interage conosco via e-mail ou WhatsApp, retemos os dados fornecidos (como nome, empresa e número de telefone) exclusivamente para dar andamento à sua solicitação.</li>
+                <li><strong>Dados de Navegação (Cookies):</strong> Coletamos automaticamente dados não sensíveis, como endereço IP, tipo de navegador e páginas acessadas, para fins de métricas de desempenho e segurança do site.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-cookie-bite"></i> 3. Uso de Cookies</h2>
+            <p>Utilizamos cookies estritamente necessários para o funcionamento do site e cookies analíticos para entender o tráfego de nossa página institucional. Você pode desativar o salvamento de cookies nas configurações do seu navegador a qualquer momento, embora isso possa afetar a experiência de navegação.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-handshake-angle"></i> 4. Compartilhamento de Informações</h2>
+            <p>A MC Jeans <strong>não vende, aluga ou cede</strong> seus dados para terceiros. O compartilhamento de informações ocorrerá apenas mediante exigência legal (ordem judicial) ou com parceiros estritamente necessários para a operação tecnológica do site (ex: provedores de hospedagem), que também estão submetidos a rigorosos padrões de segurança.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-user-lock"></i> 5. Seus Direitos (LGPD)</h2>
+            <p>De acordo com a LGPD, você tem o direito de solicitar a qualquer momento:</p>
+            <ul>
+                <li>Acesso aos dados que possuímos sobre você;</li>
+                <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
+                <li>A exclusão dos seus dados pessoais de nossos registros de contato.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-envelope"></i> 6. Contato do Encarregado (DPO)</h2>
+            <p>Se você tiver qualquer dúvida sobre esta política ou desejar exercer seus direitos referentes aos seus dados pessoais, entre em contato diretamente com nossa diretoria:</p>
+            <p style="font-family: var(--font-mono); color: var(--text-main); margin-top: 10px;">
+                E-mail: diretoria@mcjeans.com.br<br>
+                Matriz: R. Arcângelo Gabriel, 265 - Vila dos Martins, Taguaí - SP
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px;">
+                &copy; <span id="current-year"></span> MC JEANS INDUSTRIAL. TODOS OS DIREITOS RESERVADOS.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Formatar a data atual para a última atualização
+        const data = new Date();
+        const dataFormatada = data.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+        document.getElementById('data-atual').textContent = dataFormatada;
+    </script>
+</body>
+</html>
