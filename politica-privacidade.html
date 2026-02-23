@@ -21,7 +21,9 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        /* AQUI ESTÁ A CORREÇÃO DO SCROLL PARA O MENU FIXO */
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--primary); 
