@@ -3,216 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade | MC Jeans Industrial</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZCN8SBMYB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-CZCN8SBMYB');
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Privacidade | MC Jeans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #020617;
-            --secondary: #0f172a;
-            --accent: #3b82f6;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.08);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --font-mono: 'JetBrains Mono', monospace;
-        }
-
+        :root { --primary: #020617; --accent: #3b82f6; --text-dim: #94a3b8; --border: rgba(255, 255, 255, 0.08); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        /* SCROLL BEHAVIOR COM PADDING PARA O MENU FIXO */
-        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: #f8fafc; line-height: 1.6; }
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--primary); 
-            color: var(--text-main); 
-            line-height: 1.7;
-        }
+        .nav-back { padding: 15px; background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid var(--border); position: sticky; top: 0; }
+        .container { padding: 30px 20px; max-width: 800px; margin: 0 auto; }
+        
+        h1 { font-family: 'Syne', sans-serif; font-size: 1.8rem; margin-bottom: 10px; color: var(--accent); }
+        .last-update { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 40px; }
 
-        h1, h2, h3 { font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
+        /* Mobile Menu */
+        .policy-nav { display: flex; overflow-x: auto; gap: 10px; margin-bottom: 30px; padding-bottom: 10px; }
+        .policy-nav a { background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 20px; font-size: 0.75rem; text-decoration: none; color: white; white-space: nowrap; border: 1px solid var(--border); }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
-
-        /* --- Nav --- */
-        nav {
-            padding: 20px 0; border-bottom: 1px solid var(--border);
-            background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-        }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; text-decoration: none; color: white; }
-        .logo span { color: var(--accent); }
-        .btn-back { 
-            color: var(--text-main); text-decoration: none; font-size: 0.8rem; 
-            font-weight: 700; text-transform: uppercase; transition: 0.3s;
-            background: var(--glass); padding: 8px 16px; border-radius: 4px; border: 1px solid var(--border);
-        }
-        .btn-back:hover { background: var(--accent); border-color: var(--accent); }
-
-        /* --- Hero Header --- */
-        .policy-hero { 
-            padding: 150px 0 80px; 
-            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.05), transparent),
-                        linear-gradient(rgba(2, 6, 23, 1), rgba(15, 23, 42, 0.8));
-            border-bottom: 1px solid var(--border);
-        }
-        .policy-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 15px; line-height: 1; }
-        .policy-hero p { color: var(--accent); font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 1px; }
-
-        /* --- Layout Grid --- */
-        .policy-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 60px;
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* --- Sidebar (Índice Fixo) --- */
-        .sidebar { position: sticky; top: 120px; align-self: start; }
-        .sidebar h4 { color: var(--text-main); font-size: 1rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-        .sidebar ul { list-style: none; }
-        .sidebar li { margin-bottom: 12px; }
-        .sidebar a { 
-            text-decoration: none; color: var(--text-dim); font-size: 0.9rem; 
-            transition: 0.3s; display: block; border-left: 2px solid transparent; padding-left: 10px;
-        }
-        .sidebar a:hover { color: var(--accent); border-left-color: var(--accent); transform: translateX(5px); }
-
-        /* --- Content Cards --- */
-        .policy-section {
-            background: var(--glass); border: 1px solid var(--border);
-            padding: 40px; border-radius: 4px; margin-bottom: 40px;
-            transition: 0.4s ease;
-        }
-        .policy-section:hover { border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .policy-section h2 { color: var(--accent); font-size: 1.5rem; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; }
-        .policy-section h2 i { background: rgba(59, 130, 246, 0.1); padding: 10px; border-radius: 4px; font-size: 1.2rem; }
-        .policy-section p { color: var(--text-dim); margin-bottom: 20px; font-size: 0.95rem; }
-        .policy-section ul { color: var(--text-dim); margin-left: 20px; margin-bottom: 20px; font-size: 0.95rem; }
-        .policy-section li { margin-bottom: 10px; }
-        .policy-section strong { color: var(--text-main); }
-
-        /* --- Footer --- */
-        footer { padding: 40px 0; border-top: 1px solid var(--border); background: #010409; text-align: center; }
-
-        /* --- Responsividade --- */
-        @media (max-width: 992px) {
-            .policy-layout { grid-template-columns: 1fr; gap: 40px; padding: 60px 5%; }
-            .sidebar { position: relative; top: 0; background: var(--glass); padding: 25px; border-radius: 4px; border: 1px solid var(--border); }
-        }
+        .section { margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 4px; }
+        .section h2 { font-size: 1.2rem; margin-bottom: 15px; color: var(--accent); }
+        p { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
     </style>
 </head>
 <body>
+    <div class="nav-back"><a href="index.html" style="color: white; text-decoration: none; font-size: 0.9rem;">← Voltar ao site</a></div>
+    
+    <div class="container">
+        <h1>Política de Privacidade</h1>
+        <p class="last-update">Última atualização: Fevereiro de 2026</p>
 
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">MC <span>JEANS</span></a>
-            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+        <nav class="policy-nav">
+            <a href="#coleta">Coleta de Dados</a>
+            <a href="#cookies">Cookies</a>
+            <a href="#direitos">Seus Direitos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div id="coleta" class="section">
+            <h2>1. Coleta de Dados</h2>
+            <p>Retemos informações via e-mail ou WhatsApp exclusivamente para comunicação comercial direta.</p>
         </div>
-    </nav>
 
-    <header class="policy-hero">
-        <div class="container" style="max-width: 1200px;">
-            <h1>Política de Privacidade</h1>
-            <p><i class="fa-regular fa-calendar"></i> ÚLTIMA ATUALIZAÇÃO: <span id="data-atual"></span></p>
+        <div id="cookies" class="section">
+            <h2>2. Cookies</h2>
+            <p>Usamos cookies analíticos (Google Analytics) para melhorar sua experiência de navegação.</p>
         </div>
-    </header>
 
-    <div class="policy-layout">
-        <aside class="sidebar">
-            <h4>Índice do Documento</h4>
-            <ul>
-                <li><a href="#compromisso">1. Compromisso com a Privacidade</a></li>
-                <li><a href="#coleta">2. Coleta de Dados</a></li>
-                <li><a href="#cookies">3. Uso de Cookies</a></li>
-                <li><a href="#compartilhamento">4. Compartilhamento de Informações</a></li>
-                <li><a href="#direitos">5. Seus Direitos (LGPD)</a></li>
-                <li><a href="#contato">6. Contato do Encarregado (DPO)</a></li>
-            </ul>
-        </aside>
-
-        <main class="policy-content">
-            
-            <div id="compromisso" class="policy-section">
-                <h2><i class="fa-solid fa-shield-halved"></i> 1. Compromisso com a Privacidade</h2>
-                <p>A <strong>MC Jeans Industrial</strong> tem o compromisso de respeitar a sua privacidade e garantir o sigilo de todas as informações que você nos fornece. Esta Política de Privacidade, formulada à luz da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), explica como seus dados pessoais são coletados, usados e protegidos em nossa plataforma.</p>
-            </div>
-
-            <div id="coleta" class="policy-section">
-                <h2><i class="fa-solid fa-database"></i> 2. Coleta de Dados</h2>
-                <p>Como um portal de contato B2B institucional, nossa coleta de dados é mínima e estritamente focada no relacionamento comercial corporativo. Coletamos informações nas seguintes situações:</p>
-                <ul>
-                    <li><strong>Contato Direto:</strong> Quando você interage conosco via e-mail ou WhatsApp, retemos os dados fornecidos (como nome, empresa e número de telefone) exclusivamente para dar andamento à sua solicitação e estabelecer comunicação comercial.</li>
-                    <li><strong>Dados de Navegação:</strong> Coletamos automaticamente dados não sensíveis, como endereço IP, tipo de navegador e páginas acessadas, para fins de métricas de desempenho e segurança de infraestrutura do site.</li>
-                </ul>
-            </div>
-
-            <div id="cookies" class="policy-section">
-                <h2><i class="fa-solid fa-cookie-bite"></i> 3. Uso de Cookies</h2>
-                <p>Utilizamos cookies estritamente necessários para o funcionamento do site e cookies analíticos para entender o tráfego de nossa página institucional. A confirmação de leitura do nosso aviso de privacidade é armazenada localmente no seu dispositivo (<code>localStorage</code>).</p>
-                <p>Você pode desativar o salvamento de cookies nas configurações do seu navegador a qualquer momento, sem que isso impeça a visualização do nosso portfólio e infraestrutura.</p>
-            </div>
-
-            <div id="compartilhamento" class="policy-section">
-                <h2><i class="fa-solid fa-handshake-angle"></i> 4. Compartilhamento de Informações</h2>
-                <p>A MC Jeans <strong>não vende, não aluga e não cede</strong> seus dados para terceiros sob nenhuma circunstância comercial.</p>
-                <p>O compartilhamento de informações ocorrerá apenas mediante exigência legal (ordem judicial) ou com parceiros estritamente necessários para a operação tecnológica do site (ex: provedores de hospedagem), que também estão submetidos a rigorosos padrões de segurança da informação.</p>
-            </div>
-
-            <div id="direitos" class="policy-section">
-                <h2><i class="fa-solid fa-user-lock"></i> 5. Seus Direitos (LGPD)</h2>
-                <p>De acordo com a Legislação Brasileira (LGPD), você tem o direito de solicitar a qualquer momento à nossa diretoria:</p>
-                <ul>
-                    <li>Acesso transparente aos dados que possuímos sobre você;</li>
-                    <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
-                    <li>A exclusão permanente dos seus dados pessoais de nossos registros de contato comercial.</li>
-                </ul>
-            </div>
-
-            <div id="contato" class="policy-section">
-                <h2><i class="fa-solid fa-envelope-open-text"></i> 6. Contato do Encarregado (DPO)</h2>
-                <p>Se você tiver qualquer dúvida sobre esta política, sobre como tratamos seus dados, ou desejar exercer seus direitos referentes aos seus dados pessoais, entre em contato diretamente com nossa diretoria corporativa:</p>
-                <div style="background: rgba(255,255,255,0.02); padding: 20px; border: 1px solid var(--border); border-radius: 4px; margin-top: 15px;">
-                    <p style="margin-bottom: 5px; color: var(--text-main);"><strong>E-mail Corporativo:</strong></p>
-                    <p style="font-family: var(--font-mono); color: var(--accent); margin-bottom: 15px;">diretoria@mcjeans.com.br</p>
-                    
-                    <p style="margin-bottom: 5px; color: var(--text-main);"><strong>Matriz Industrial (Correspondência):</strong></p>
-                    <p style="font-family: var(--font-mono); color: var(--text-dim);">R. Arcângelo Gabriel, 265 - Vila dos Martins<br>Taguaí - SP, CEP: 18890-099</p>
-                </div>
-            </div>
-
-        </main>
+        <div id="contato" class="section">
+            <h2>3. Contato</h2>
+            <p>Dúvidas? Envie um e-mail para <strong>diretoria@mcjeans.com.br</strong></p>
+        </div>
     </div>
-
-    <footer>
-        <div class="container">
-            <p style="font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px;">
-                © <span id="current-year"></span> MC JEANS INDUSTRIAL. TODOS OS DIREITOS RESERVADOS.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Ano Automático
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Formatar a data atual para a última atualização
-        const data = new Date();
-        const dataFormatada = data.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
-        document.getElementById('data-atual').textContent = dataFormatada;
-    </script>
 </body>
 </html>
