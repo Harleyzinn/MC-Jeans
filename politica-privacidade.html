@@ -3,56 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidade | MC Jeans</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <title>Políticas de Privacidade | MC Jeans</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZCN8SBMYB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CZCN8SBMYB');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Syne:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #020617; --accent: #3b82f6; --text-dim: #94a3b8; --border: rgba(255, 255, 255, 0.08); }
+        :root { --primary: #020617; --accent: #3b82f6; --text-dim: #94a3b8; --border: rgba(255, 255, 255, 0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--primary); color: #f8fafc; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: #f8fafc; line-height: 1.7; }
         
-        .nav-back { padding: 15px; background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid var(--border); position: sticky; top: 0; }
-        .container { padding: 30px 20px; max-width: 800px; margin: 0 auto; }
+        .nav-back { padding: 15px 6%; background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .container { padding: 40px 6%; max-width: 900px; margin: 0 auto; }
         
-        h1 { font-family: 'Syne', sans-serif; font-size: 1.8rem; margin-bottom: 10px; color: var(--accent); }
-        .last-update { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 40px; }
+        h1 { font-family: 'Syne', sans-serif; font-size: 2.2rem; margin-bottom: 5px; color: #fff; }
+        .update-tag { font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; display: block; }
 
-        /* Mobile Menu */
-        .policy-nav { display: flex; overflow-x: auto; gap: 10px; margin-bottom: 30px; padding-bottom: 10px; }
-        .policy-nav a { background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 20px; font-size: 0.75rem; text-decoration: none; color: white; white-space: nowrap; border: 1px solid var(--border); }
+        .policy-nav { display: flex; overflow-x: auto; gap: 12px; margin-bottom: 40px; padding-bottom: 15px; border-bottom: 1px solid var(--border); }
+        .policy-nav a { background: rgba(255,255,255,0.03); padding: 10px 20px; border-radius: 4px; font-size: 0.8rem; text-decoration: none; color: var(--text-dim); white-space: nowrap; border: 1px solid var(--border); transition: 0.3s; }
+        .policy-nav a:hover { border-color: var(--accent); color: #fff; }
 
-        .section { margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 4px; }
-        .section h2 { font-size: 1.2rem; margin-bottom: 15px; color: var(--accent); }
-        p { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
+        .section { margin-bottom: 40px; }
+        .section h2 { font-size: 1.4rem; margin-bottom: 20px; color: var(--accent); font-family: 'Syne', sans-serif; }
+        .section p { font-size: 1rem; color: var(--text-dim); margin-bottom: 15px; }
+        .section ul { margin-left: 20px; color: var(--text-dim); margin-bottom: 20px; }
+        .section li { margin-bottom: 10px; }
+        
+        strong { color: #fff; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-dim); }
     </style>
 </head>
 <body>
-    <div class="nav-back"><a href="index.html" style="color: white; text-decoration: none; font-size: 0.9rem;">← Voltar ao site</a></div>
+    <div class="nav-back">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 0.8rem; font-weight: 700;">← VOLTAR AO SITE</a>
+        <span style="font-size: 0.7rem; font-weight: 800;">MC JEANS <span style="color: var(--accent);">LEGAL</span></span>
+    </div>
     
     <div class="container">
         <h1>Política de Privacidade</h1>
-        <p class="last-update">Última atualização: Fevereiro de 2026</p>
+        <span class="update-tag">Última atualização: Fevereiro de 2026</span>
 
         <nav class="policy-nav">
-            <a href="#coleta">Coleta de Dados</a>
-            <a href="#cookies">Cookies</a>
-            <a href="#direitos">Seus Direitos</a>
-            <a href="#contato">Contato</a>
+            <a href="#coleta">1. Coleta</a>
+            <a href="#cookies">2. Cookies</a>
+            <a href="#direitos">3. Seus Direitos</a>
+            <a href="#contato">4. Contato</a>
         </nav>
 
         <div id="coleta" class="section">
-            <h2>1. Coleta de Dados</h2>
-            <p>Retemos informações via e-mail ou WhatsApp exclusivamente para comunicação comercial direta.</p>
+            <h2>1. Coleta e Uso de Dados</h2>
+            <p>Nós coletamos apenas informações estritamente necessárias para o relacionamento comercial B2B. Isso inclui:</p>
+            <ul>
+                <li><strong>Comunicação Direta:</strong> Nome e contatos fornecidos voluntariamente via e-mail ou WhatsApp.</li>
+                <li><strong>Navegação:</strong> Dados técnicos anônimos processados pelo Google Analytics para medir a performance do site.</li>
+            </ul>
         </div>
 
         <div id="cookies" class="section">
-            <h2>2. Cookies</h2>
-            <p>Usamos cookies analíticos (Google Analytics) para melhorar sua experiência de navegação.</p>
+            <h2>2. Cookies Analíticos</h2>
+            <p>Utilizamos cookies para entender como os visitantes interagem com o site da MC Jeans. Essas informações são agregadas e não identificam usuários individualmente. Você pode gerenciar ou desativar os cookies diretamente nas configurações do seu navegador.</p>
+        </div>
+
+        <div id="direitos" class="section">
+            <h2>3. Seus Direitos (LGPD)</h2>
+            <p>Conforme a Lei Geral de Proteção de Dados, você tem o direito de:</p>
+            <ul>
+                <li><strong>Acesso:</strong> Saber quais dados temos sobre sua interação.</li>
+                <li><strong>Exclusão:</strong> Solicitar que removamos seus contatos de nossas bases de atendimento.</li>
+                <li><strong>Correção:</strong> Atualizar informações imprecisas.</li>
+            </ul>
+            <p>Para exercer qualquer um desses direitos, utilize o canal de contato oficial abaixo.</p>
         </div>
 
         <div id="contato" class="section">
-            <h2>3. Contato</h2>
-            <p>Dúvidas? Envie um e-mail para <strong>diretoria@mcjeans.com.br</strong></p>
+            <h2>4. Contato e Encarregado</h2>
+            <p>Dúvidas sobre nossa política ou sobre o tratamento de dados pessoais devem ser enviadas para:</p>
+            <p><strong>E-mail:</strong> diretoria@mcjeans.com.br</p>
+            <p><strong>Endereço:</strong> R. Arcângelo Gabriel, 265 - Taguaí - SP</p>
         </div>
     </div>
+
+    <footer>
+        © 2026 MC Jeans Industrial - Conformidade LGPD Brasil.
+    </footer>
 </body>
 </html>
